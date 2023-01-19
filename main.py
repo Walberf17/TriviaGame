@@ -18,14 +18,19 @@ from kivy.uix.widget import Widget
 
 # other imports
 import random
+import json
 from functools import partial
 import os
-from questions import QUESTIONS
 
 # Variables
 TOTAL_POINTS = 0
 TOTAL_QUESTIONS = 0
 os.environ['KIVY_ORIENTATION'] = 'Portrait'
+
+QUESTIONS = []
+
+with open('questions.json', 'r') as f:
+    QUESTIONS = json.load(f)
 
 # Screens
 class MainScreen(Screen):
@@ -46,7 +51,7 @@ class Answer(MDRelativeLayout):
 
         self.letter = MDLabel(text=f" {letter})", valign="center", font_style="H5", max_lines=1, size_hint_x=.1)
 
-        self.lbl = MDLabel(text=text, valign="center", font_style="H5", size_hint_x=.9)
+        self.lbl = MDLabel(text=text, valign="center", font_style="H5", size_hint_x=.9, markup=True)
 
         line = MDGridLayout(cols=2)
 
@@ -54,7 +59,7 @@ class Answer(MDRelativeLayout):
 
         line.add_widget(self.lbl)
         self.btn = MDRoundFlatButton(on_release=partial(self.give_answer, right), size_hint=line.size_hint,
-                                     pos=line.pos)
+                                     pos_hint={'center': [.5,.5]})
 
         self.add_widget(line)
         self.add_widget(self.btn, index=len(line.children))

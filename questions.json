@@ -1,0 +1,37 @@
+[
+    {
+        "text": "Qual o menor átomo?",
+        "options": [
+            "Hidrogênio.",
+            "Líito.",
+            "Sódio."
+        ]
+    },
+    {
+        "text": "Qual o principal átomo para química orgânica?",
+        "options": [
+            "Carbono",
+            "Cloro",
+            "Hidrogênio",
+            "Oxigênio"
+        ]
+    },
+    {
+        "text": "Qual a fórmula da Água?",
+        "options": [
+            "H[sub]2[/sub]O",
+            "H[sub]2[/sub]O[sub]2[/sub]",
+            "CO[sub]2[/sub]",
+            "NaCl"
+        ]
+    },
+    {
+        "text": "Quantos átomos existem em 3 moléculas de C[sub]2[/sub]H[sub]6[/sub]O?",
+        "options": [
+            "27",
+            "9",
+            "3",
+            "24"
+        ]
+    }
+]
